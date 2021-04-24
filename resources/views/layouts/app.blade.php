@@ -14,7 +14,7 @@
 	<link href="{{asset('public/frontend/vendor/icons/feather.css')}}" rel="stylesheet" type="text/css" />
 	<link href="{{asset('public/frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
 	<link href="{{asset('public/frontend/css/style.css')}}" rel="stylesheet" />
-	
+
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 	<script src="{{asset('public/frontend/js/api.js')}}" type="9ef55dd56cdb8d002ab758dc-text/javascript"></script>
 	<script src="{{asset('public/frontend/js/osahan.js')}}" type="9ef55dd56cdb8d002ab758dc-text/javascript"></script>
 	<script src="{{asset('public/frontend/js/cloudflare-static/rocket-loader.min.js')}}" data-cf-settings="9ef55dd56cdb8d002ab758dc-|49" defer=""></script>
-	<script defer src="{{asset('public/frontend/js/static.cloudflareinsights.com/beacon.min.js')}}" data-cf-beacon='{"rayId":"5fee368779631a80","r":1,"version":"2020.11.6","si":10}'></script>	
+	<script defer src="{{asset('public/frontend/js/static.cloudflareinsights.com/beacon.min.js')}}" data-cf-beacon='{"rayId":"5fee368779631a80","r":1,"version":"2020.11.6","si":10}'></script>
 	<!-- Pixel Code for https://socialproofo.com/demo/ -->
 	<script async src="https://socialproofo.com/demo/pixel/g2mvtsxw6hc399gbd318oap8n6y48pq2"></script>
 	<!-- END Pixel Code -->
@@ -36,12 +36,15 @@
 		$(document).on("click", "#form_one",function(){
 			var name = $("input[name='victim_name']").val()
 			var fnd_name = $("input[name='fnd_name']").val()
-			if(name == "" || fnd_name == ""){
-				alert('Field Empty')
+			if(name === ""){
+                $(".name").addClass('border-danger')
+			}
+			else if(fnd_name === ""){
+                $(".fnd").addClass('border-danger')
 			}else{
 				$(".form_one").hide()
 				$(".form_two").show()
-			}			
+			}
 		})
 		$(document).on("click", "#form_two",function(){
 			$(".form_two").hide()
@@ -52,4 +55,4 @@
 	</script>
 </body>
 
-</html> 
+</html>

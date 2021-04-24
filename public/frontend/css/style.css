@@ -1,11 +1,11 @@
 
- @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;display=swap');
 /* body */
- body {
-     background: #161616;
-     font-size: 15px;
-     font-family: 'Ubuntu', sans-serif;
-     color: #ffffff;
+body {
+    background: #161616;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
 }
 
 /* Login Page Designs */
@@ -25,6 +25,7 @@
     background-position: center;
     position: relative;
     z-index: 1;
+    padding: 50px 0
 }
 .container-login100::before {
     content: "";
@@ -46,9 +47,8 @@
 /* ar-style start  */
 input.ar_form_control {
     display: block;
-    border: none;
     border-radius: 2px;
-    height: 30px;
+    height: 45px;
     background: transparent;
     border: 1px solid #fff;
     width: 100%;
@@ -57,6 +57,27 @@ input.ar_form_control {
     padding: 10px;
 }
 
+.victim-img {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+}
+
+.victim-img_two {
+    position: relative;
+}
+
+.victim-img img {
+    border-radius: 50%;
+}
+
+p.badge.badge-dark.d-block.py-3.text-monospace {
+    font-size: 13px;
+}
+.f-16{
+    font-size: 16px !important;
+}
 :focus {
     outline: -webkit-focus-ring-color auto 0px;
 }

