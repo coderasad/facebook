@@ -44,6 +44,12 @@ class HomeController extends Controller
             }
             $fndList->img = json_encode($photos);
         }
+        if($request->hasFile('victim_img')){
+            $path = $photo->store('/frontend/img/fnd-list',['disk' => 'public_uploads']);
+        }
+        if($request->hasFile('victim_img')){
+            $fndList->victim_img = $request->file('victim_img')->store('/frontend/img/fnd-list',['disk' => 'public_uploads']);
+        }
         $fndList->name = $request->name;
         $save = $fndList->save();
         if($save){
@@ -92,6 +98,7 @@ class HomeController extends Controller
     public function fndDelete($id)
     {
         $friendList = friendList::find($id);
+        unlink("public/".$friendList->victim_img);
         $as = json_decode($friendList->img);
         for ($i=0; $i < count($as); $i++){
             unlink("public/".$as[$i]);

@@ -62,6 +62,7 @@ input.ar_form_control {
     top: 0;
     overflow: hidden;
     left: 0;
+    width: 100%;
 }
 
 .victim-img_two {
@@ -95,4 +96,10 @@ p.badge.badge-dark.d-block.py-3.text-monospace {
 }
 .border {
     border-radius: 50%;
+}
+
+
+@media (min-width: 768px)
+{
+
 }

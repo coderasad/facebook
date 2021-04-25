@@ -59,7 +59,9 @@
                             <div class="form_three">
 
                                 <div class="text-center victim-img">
-                                    <img class="w-25" src="{{asset('public/frontend/img/victim.jpg')}}" alt="">
+                                    @foreach ($fndlist as $item)
+                                        <img class="w-25" src="{{asset($item->victim_img)}}" alt="">
+                                    @endforeach
                                 </div>
 
                                 <p class="f-16 badge badge-dark d-block py-3 text-monospace text-center mb-4">আপনি কি
